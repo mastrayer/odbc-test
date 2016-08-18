@@ -23,8 +23,7 @@ SQLCHAR *ODBC_PW = (SQLCHAR*)"";
 char szID[128] = { 0, };
 char szPW[128] = { 0, };
 
-void UnicodeToAnsi(const wchar_t* pszText, const int destSize, char* pszDest)
-{
+void UnicodeToAnsi(const wchar_t* pszText, const int destSize, char* pszDest) {
 	_snprintf_s(pszDest, destSize, _TRUNCATE, "%S", pszText);
 }
 bool DBConnect() {
